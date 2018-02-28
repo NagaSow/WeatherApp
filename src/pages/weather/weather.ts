@@ -15,6 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class WeatherPage {
 
+  weatherForm: FormGroup;
+  private appConstants:any;
+  
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

@@ -15,4 +15,29 @@
 
 <ion-content padding>
 
+  <form [formGroup]="weatherForm" novalidate>
+    <table width="100%">
+      <tr>
+        <td>
+          <ion-item>
+            <ion-label floating>Location
+            </ion-label>
+            <ion-input type="text" formControlName="location" name="location">
+            </ion-input>
+          </ion-item><br/>
+          <p [hidden]="weatherForm.controls.location.valid" danger padding-left>
+            Enter Valid Location
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button ion-button block [disabled]="!weatherForm.controls.location.valid" (click)="getWeather(weatherForm)">
+            <ion-icon name="custom-button"></ion-icon>Weather
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
 </ion-content>
