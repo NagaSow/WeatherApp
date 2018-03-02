@@ -18,8 +18,8 @@ import { ForecastPage } from "../forecast/forecast";
 })
 export class WeatherApiPage {
 
-  tab1Root:any = 'WeatherPage'
-  tab2Root:any = 'ForecastPage'
+  weatherRoot:any = 'WeatherPage'
+  forecastRoot:any = 'ForecastPage'
 
 
   constructor(public navCtrl: NavController) {}

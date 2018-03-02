@@ -3,16 +3,14 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
 import { MyApp } from './app.component';
-
 import { WeatherApiPage } from "../pages/weather-api/weather-api";
 import { WeatherPage } from "../pages/weather/weather";
 import { ForecastPage } from "../pages/forecast/forecast";
 import { AppConstantsProvider } from '../providers/app-constants/app-constants';
-//  import { HttpModule } from "@angular/http";
+import { HttpModule } from "@angular/http";
 import { WeatherApiProvider } from '../providers/weather-api/weather-api';
-import { WeatherApiPageModule } from "../pages/weather-api/weather-api.module";
+
 @NgModule({
   declarations: [
     MyApp,
@@ -20,13 +18,12 @@ import { WeatherApiPageModule } from "../pages/weather-api/weather-api.module";
     WeatherApiPage,
     
     ForecastPage,
-    WeatherPage,
-    
-    //  HttpModule
+    WeatherPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule
     
   ],
   bootstrap: [IonicApp],
@@ -35,8 +32,7 @@ import { WeatherApiPageModule } from "../pages/weather-api/weather-api.module";
     
     WeatherApiPage,
    ForecastPage,
-   WeatherPage,
-    // HttpModule
+   WeatherPage
   ],
   providers: [
     StatusBar,

@@ -3,6 +3,9 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WeatherApiPage } from "../pages/weather-api/weather-api";
+// import { AppConstantsProvider } from "../providers/app-constants/app-constants";
+// import { WeatherApiProvider } from "../providers/weather-api/weather-api";
+
 
 @Component({
   templateUrl: 'app.html'
@@ -19,4 +22,6 @@ export class MyApp {
     });
   }
 }
+
+// ionicBootstrap(MyApp, [AppConstantsProvider],[WeatherApiProvider]);
 
